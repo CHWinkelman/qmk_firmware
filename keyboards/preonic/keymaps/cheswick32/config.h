@@ -37,3 +37,5 @@
 //#define MIDI_TONE_KEYCODE_OCTAVES 2
 
 #define TAPPING_TERM 175
+
+#define RGB_SLEEP
