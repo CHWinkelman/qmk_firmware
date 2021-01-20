@@ -35,3 +35,7 @@
 
 /* override number of MIDI tone keycodes (each octave adds 12 keycodes and allocates 12 bytes) */
 //#define MIDI_TONE_KEYCODE_OCTAVES 2
+
+#define ENCODER_PAD_A ( B12 )
+#define ENCODER_PAD_B ( B13 )
+#define ENCODER_RESOLUTION 4

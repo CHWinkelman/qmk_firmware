@@ -247,14 +247,30 @@ void encoder_update_user(uint8_t index, bool clockwise) {
       } else {
         muse_tempo-=1;
       }
-    }
+    } 
+  } else if (IS_LAYER_ON(_RAISE)) {
+      if (clockwise) {
+        register_code(KC_VOLU);
+        unregister_code(KC_VOLU);
+      } else {
+        register_code(KC_VOLD);
+        unregister_code(KC_VOLD);
+      }
+  } else if (IS_LAYER_ON(_LOWER)) {
+      if (clockwise) {
+        register_code(KC_BRIU);
+        unregister_code(KC_BRIU);
+      } else {
+        register_code(KC_BRID);
+        unregister_code(KC_BRID);
+      }
   } else {
     if (clockwise) {
-      register_code(KC_PGDN);
-      unregister_code(KC_PGDN);
+      register_code(KC_WH_D);
+      unregister_code(KC_WH_D);
     } else {
-      register_code(KC_PGUP);
-      unregister_code(KC_PGUP);
+      register_code(KC_WH_U);
+      unregister_code(KC_WH_U);
     }
   }
 }
